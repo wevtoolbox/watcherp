@@ -1,20 +1,20 @@
 # watcherp
 
-[![Build Status](https://travis-ci.org/devilbox/watcherp.svg?branch=master)](https://travis-ci.org/devilbox/watcherp)
+[![Build Status](https://travis-ci.org/wevtoolbox/watcherp.svg?branch=master)](https://travis-ci.org/wevtoolbox/watcherp)
 
-**[watcherp](https://github.com/devilbox/watcherp/blob/master/watcherp)** will watch for port binding changes (ports started or stopped binding on a network addresss) and will execute specified commands or shell scripts (`-a`, `-d`) depending on the event.
+**[watcherp](https://github.com/wevtoolbox/watcherp/blob/master/watcherp)** will watch for port binding changes (ports started or stopped binding on a network addresss) and will execute specified commands or shell scripts (`-a`, `-d`) depending on the event.
 Once all events have happened during one round (`-i`), a trigger command can be executed (`-t`).
 Note, the trigger command will only be execute when at least one add or delete command has succeeded with exit code 0.
 
 ---
 
-If you need the same functionality to monitor file system changes, check out **[watcherd](https://github.com/devilbox/watcherd)**.
+If you need the same functionality to monitor file system changes, check out **[watcherd](https://github.com/wevtoolbox/watcherd)**.
 
 ---
 
 ### Modes
 
-**[watcherp](https://github.com/devilbox/watcherp/blob/master/watcherp)** can either use [netstat](https://linux.die.net/man/8/netstat) or [ss](https://linux.die.net/man/8/ss) to watch for binding port changes. The default is to use netstat.
+**[watcherp](https://github.com/wevtoolbox/watcherp/blob/master/watcherp)** can either use [netstat](https://linux.die.net/man/8/netstat) or [ss](https://linux.die.net/man/8/ss) to watch for binding port changes. The default is to use netstat.
 
 ### Placeholders
 
@@ -27,7 +27,7 @@ You can specify the placeholders as many times as you want. See the following ex
 
 ### Examples
 
-By using **[vhost_gen.py](https://github.com/devilbox/vhost-gen)** (which is capable of creating Nginx or Apache vhost config files for normal vhosts or reverse proxies), the following example will create new Nginx reverse proxy vhosts on-the-fly. `watcherp` uses its add command to parse network address and port to `vhost_gen.py` which will create a configuration file and reloads Nginx.
+By using **[vhost_gen.py](https://github.com/wevtoolbox/vhost-gen)** (which is capable of creating Nginx or Apache vhost config files for normal vhosts or reverse proxies), the following example will create new Nginx reverse proxy vhosts on-the-fly. `watcherp` uses its add command to parse network address and port to `vhost_gen.py` which will create a configuration file and reloads Nginx.
 
 ```shell
 # %n will be replaced by watcherp with the network address the port started binding to
@@ -80,3 +80,11 @@ Misc arguments:
   --help        Show this help screen.
   --version     Show version information.
 ```
+
+## 📄 License
+
+**[MIT License](LICENSE.md)**
+
+Copyright (c) 2017 **[cytopia](https://github.com/cytopia)**
+
+Copyright (c) 2024 **[bogny](https://github.com/bogny)**
