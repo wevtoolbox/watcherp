@@ -4,6 +4,8 @@
 #
 # Copyright (c) 2017 cytopia
 #
+# Copyright (c) 2024 bogny
+#
 
 ############################################################
 # Settings
@@ -25,10 +27,10 @@ IFS=$'\n'
 
 # Versioning
 MY_NAME="watcherp"
-MY_DATE="2017-09-30"
-MY_URL="https://github.com/devilbox/watcherp"
-MY_AUTHOR="cytopia <cytopia@everythingcli.org>"
-MY_GPGKEY="0xA02C56F0"
+MY_DATE="2024-05-13"
+MY_URL="https://github.com/wevtoolbox/watcherp"
+MY_AUTHOR="wevtoolbox <wevtoolbox@gmail.com>"
+MY_GPGKEY="0x41A7F228"
 MY_VERSION="0.1"
 MY_LICENSE="MIT"
 
